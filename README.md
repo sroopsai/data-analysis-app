@@ -25,11 +25,22 @@
     
 ### How to read a *CSV* File
 
+- Using `reader()` function of `csv module`
 ```python
 # import required modules
 import csv
-with open("filename.csv", "rt") as f:
+with open("filename.csv", "r") as f:
     data = csv.reader(f)
     for row in data:
         print(row)
+```
+
+- Using `DictReader()` function of `csv module`
+```python
+# import required modules
+import csv
+
+data= csv.DictReader(open("filename.csv", "r"))
+for row in reader:
+    print(row)
 ```
